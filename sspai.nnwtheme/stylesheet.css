@@ -66,7 +66,7 @@ body {
     --link-active-color: #2d80f1;
     --highlight-color: #5e9ef4;
     --horizontal-rule-color: #373737;
-    --blockquote-color: #8e8787;
+    --blockquote-color: #a6a6a6;
 
     --footer-color: rgba(94, 158, 244, 1);
     --system-message-color: #5f5f5f;
@@ -335,7 +335,7 @@ a:hover {
   font-style: normal;
   font-weight: 400;
   font-size: 1rem;
-  line-height: 31px;
+  line-height: 2;
   color: var(--text-color);
 }
 
@@ -408,27 +408,25 @@ a:hover {
   border-bottom: 1px solid var(--blockquote-color);
 }
 
-.articleBody img {
-  max-width: 100%;
-  position: relative;
-}
 
-@media screen and (max-width: 767px) {
+.articleBody img,
+.articleBody figure,
+.articleBody video,
+.articleBody object {
+  max-width: 80%;
+  height: auto !important;
+  margin: 0 auto;
+  outline: none;
+  text-align: center;
+  display: block;
+}
+@media screen and (max-width: 479px) {
   .articleBody img {
     max-width: 100%;
   }
 }
 
-img,
-figure,
-video,
-object {
-  max-width: 80%;
-  height: auto !important;
-  margin: 0 auto;
-}
-
-video {
+.articleBody video {
   width: 100% !important;
 }
 
@@ -448,6 +446,16 @@ video {
   text-align: center;
   color: var(--blockquote-color);
   margin-top: 20px;
+}
+
+.articleBody figcaption a {
+  color: var(--text-color);
+  border-color: var(--text-color);
+}
+
+.articleBody figcaption a:hover, .articleBody figcaption a:focus, .articleBody figcaption a:visited{
+  color: var(--text-color);
+  border-color: var(--text-color);
 }
 
 .articleBody p {
@@ -487,7 +495,7 @@ video {
 .articleBody h5,
 .articleBody h6 {
   margin: 30px 0 10px 0;
-  color: #292525;
+  color: var(--title-color);
   line-height: 150%;
   font-family: PingFang SC, Helvetica Neue, Helvetica, Hiragino Sans GB,
     Microsoft YaHei, "\5FAE\8F6F\96C5\9ED1", Arial, sans-serif;
@@ -520,7 +528,7 @@ video {
 }
 
 .articleBody h2 .titleNumber {
-  color: #d71a1b;
+  color: var(--highlight-color);
   margin-right: 8px;
 }
 
@@ -544,7 +552,7 @@ video {
 }
 
 .articleBody h3 .titleNumber {
-  color: #d71a1b;
+  color: var(--highlight-color);
   margin-right: 8px;
 }
 
@@ -853,6 +861,11 @@ a.footnote:hover,
     padding-left: 48px;
     padding-right: 48px;
   }
+
+  :root {
+		color-scheme: light dark;
+    font-size: [[font-size]]px;
+	}
 
   .smallText {
     font-size: 14px;
