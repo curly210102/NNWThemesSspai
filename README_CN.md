@@ -1,3 +1,5 @@
+<h4 align="right"><a href="https://github.com/curly210102/NNWThemesSspai">English</a></strong> | <strong>简体中文</strong></h4>
+
 # NNWThemesSspai
 
 [少数派](https://sspai.com/) 风格的 [NetNewsWire](https://netnewswire.com/) 主题
@@ -10,5 +12,5 @@
 netnewswire://theme/add?url=https%3A%2F%2Fgithub.com%2Fcurly210102%2FNNWThemesSspai%2Freleases%2Flatest%2Fdownload%2Fsspai.nnwtheme.zip
 ```
 
-添加后进入设置启用主题，即可食用啦～🥳
+添加后进入设置启用主题，就可食用啦～🥳
 
